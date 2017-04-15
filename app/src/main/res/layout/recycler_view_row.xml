@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangular_body"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/recyclerlayout"
+            android:layout_width="wrap_content"
+            android:textColor="@color/bgBlue" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            style="@style/recyclerlayout"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@id/tv_date"
+            android:textColor="@color/bgBlue" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_distance"
+            android:layout_margin="3dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pickup_to_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_circlegreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_green" />
+
+            <View
+                android:id="@+id/v_destinationline"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_circlered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_red" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_pickup"
+                style="@style/recyclerlayout"
+                />
+
+            <TextView
+                android:id="@+id/tv_destination"
+                style="@style/recyclerlayout"
+                android:layout_marginTop="8dp"/>
+            <TextView
+               android:id="@+id/tv_ridetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/ride_time"
+                android:textSize="13sp"
+                android:layout_marginTop="8dp"
+                    />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        style="@style/fillparent"
+        android:layout_height="1dp"
+        android:layout_margin="8dp"/>
+    <LinearLayout
+        android:layout_width=""
+        android:layout_height=""></LinearLayout>
+    
+
+</LinearLayout>

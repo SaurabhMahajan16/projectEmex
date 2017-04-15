@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saurabh.uipractise.SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/activity_toolbar_"></include>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_toolbar"
+        android:layout_margin="12dp"
+        >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_toolbar"
+            >
+
+            <RelativeLayout
+                android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/img_btn_user"
+                    style="@style/signuplayout"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/user_placeholder"
+                    android:background="@drawable/round_corner"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_user"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                >
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/floatName"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/ll_user"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/et_fName"
+                    style="@style/signuplayout"
+                    android:layout_weight="0.95"
+                    android:backgroundTint="@color/warm_grey"
+                    android:drawableStart="@drawable/icon_name"
+                    android:hint="@string/first_name"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:maxLines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:background="@color/warm_grey"
+                    android:padding="20dp"
+                    />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/floatLName"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/ll_user"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95">
+
+                <EditText
+                    android:id="@+id/et_lName"
+                    style="@style/signuplayout"
+
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/warm_grey"
+                    android:drawableStart="@drawable/icon_contact"
+                    android:hint="@string/last_name"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:maxLines="1" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/floatContactNo"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/ll_name"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_contact_no"
+                style="@style/signuplayout"
+
+                android:digits="0123456789"
+                android:drawableStart="@drawable/icon_contact"
+                android:hint="@string/contact_number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/floatContactName"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/floatContactNo"
+                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_contact_name"
+                style="@style/signuplayout"
+                android:drawableStart="@drawable/icon_name"
+                android:hint="@string/contact"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/floatEmail"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/floatContactName"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/signuplayout"
+                android:layout_below="@+id/et_contact_name"
+                android:drawableStart="@drawable/icon_email"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/floatPass"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/floatEmail"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/signuplayout"
+                android:layout_below="@+id/et_email"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_password"
+                android:hint="@string/password"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:password="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/floatConfirmPass"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/floatPass"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et_confirmpassword"
+                style="@style/signuplayout"
+                android:layout_below="@+id/et_password"
+                android:drawableStart="@drawable/icon_password"
+                android:hint="@string/cnfrm_pass"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:password="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/floatConfirmPass"
+                android:layout_marginTop="15dp">
+
+                <ImageButton
+                    android:id="@+id/imgBtn_check"
+                    style="@style/icon_layout"
+                    android:background="@drawable/check_button"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <TextView
+                    style="@style/signuplayout"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/tv_conditions"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/bgBlue"
+                   android:paddingLeft="6dp"
+                    />
+            </LinearLayout>
+
+            <Button
+                style="@style/signuplayout"
+                android:id="@+id/btn_signUp"
+                android:layout_below="@+id/ll_check"
+                android:background="@color/bgBlue"
+                android:text="@string/SignUp"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

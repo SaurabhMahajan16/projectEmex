@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   style="@style/fillparent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/llVpFragment"
+        style="@style/fillparent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/ll_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:orientation="horizontal"
+
+                    >
+                    <Button
+                        android:id="@+id/btn_jobhistory"
+                        style="@style/fragmentButtonLayout"
+                        android:text="@string/history"
+                        android:layout_marginEnd="0.2dp"
+                        />
+                    <Button
+                        android:id="@+id/btn_missedjobs"
+                        style="@style/fragmentButtonLayout"
+                        android:text="@string/missed_jobs"/>
+
+
+
+
+                </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_Swipe"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/ll_button"
+            style="@style/fillparent"
+            >
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_history"
+                style="@style/fillparent" />
+
+
+        </android.support.v4.view.ViewPager>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

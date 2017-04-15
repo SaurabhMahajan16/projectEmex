@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.example.saurabh.uipractise.ContentNavDrawer">
+
+    <LinearLayout
+        android:id="@+id/ll_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/user_placeholder" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            style="@style/navDrawerlayout"
+            android:layout_gravity="center"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            style="@style/navDrawerlayout"
+            android:gravity="center"
+            android:text="@string/edit_profile"
+            android:textColor="@color/warm_grey"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_networks"
+                style="@style/navDrawerlayout"
+                android:layout_centerVertical="true"
+                android:drawableStart="@drawable/icon_networks"
+                android:text="@string/network_view" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="16dp"
+                android:button="@drawable/network_selector" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_payment"
+            style="@style/navDrawerlayout"
+            android:drawableStart="@drawable/icon_payment_pressed"
+            android:text="@string/payments" />
+
+        <TextView
+            android:id="@+id/tv_jobhistory"
+            style="@style/navDrawerlayout"
+            android:drawableStart="@drawable/icon_job_normal"
+            android:text="@string/history" />
+
+        <TextView
+            android:id="@+id/tv_emergency_contact"
+            style="@style/navDrawerlayout"
+            android:drawableStart="@drawable/icon_emergency_normal"
+            android:gravity="start"
+            android:text="@string/emergency" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            style="@style/navDrawerlayout"
+            android:drawableStart="@drawable/icon_help_normal"
+            android:text="@string/help" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            style="@style/navDrawerlayout"
+            android:drawableStart="@drawable/icon_logout_normal"
+            android:text="@string/logout" />
+
+        <TextView
+            style="@style/navDrawerlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/support"
+            android:textColor="@color/warm_grey" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_below="@+id/ll_pane"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+
+        android:orientation="horizontal">
+
+
+        <ImageView
+            style="@style/icon_layout"
+            android:id="@+id/iv_call"
+            android:src="@drawable/icon_support_call_normal"
+            android:layout_marginEnd="20dp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:id="@+id/view_line"
+            android:layout_toEndOf="@+id/iv_call"
+            android:layout_height="match_parent"
+            android:background="@color/warm_grey" />
+
+        <ImageView
+            style="@style/icon_layout"
+            android:layout_toEndOf="@id/view_line"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/icon_support_msg_normal" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

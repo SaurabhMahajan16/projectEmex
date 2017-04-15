@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saurabh.uipractise.ForgotActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/activity_toolbar_"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/tv_text_forgot"
+            style="@style/ButtonLayout"
+            android:layout_marginTop="15dp"
+            android:text="@string/tv_forgot"
+            android:gravity="center"
+            />
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/usernameWrapper"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tv_text_forgot"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_contact"
+                style="@style/EtLayout"
+                android:drawableStart="@drawable/icon_contact"
+                android:layout_below="@+id/tv_text_forgot"
+                android:backgroundTint="@color/bgBlue"
+                android:hint="  Contact number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:digits="@string/phone_no"
+                android:maxLines="1"
+                android:textColor="@color/bgBlue"
+                android:textColorHint="@color/warm_grey" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/ButtonLayout"
+            android:layout_below="@+id/usernameWrapper"
+            android:layout_marginTop="18dp"
+            android:background="@color/bgBlue"
+            android:text="@string/continue_text"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

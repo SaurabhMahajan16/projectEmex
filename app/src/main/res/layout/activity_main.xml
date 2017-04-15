@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context="com.example.saurabh.uipractise.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            style="@style/LogoLayout"
+            android:src="@drawable/logo" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/ButtonLayout"
+            android:layout_below="@+id/iv_logo"
+            android:layout_marginTop="25dp"
+            android:background="@color/bgBlue"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_signUp"
+            style="@style/ButtonLayout"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button"
+            android:text="@string/SignUp"
+            android:textColor="@color/bgBlue"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>
