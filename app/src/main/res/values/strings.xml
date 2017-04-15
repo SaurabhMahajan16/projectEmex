@@ -17,7 +17,7 @@ to reset your password.</string>
     <string name="password">Password</string>
     <string name="cnfrm_pass">Confirm password</string>
     <string name="title_activity_home">HomeActivity</string>
-
+    <string name="driver_name">Driver name:</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="network_view">Networks View</string>
@@ -32,7 +32,7 @@ to reset your password.</string>
     <string name="job_history">Job History</string>
     <string name="missed_jobs">Missed Jobs</string>
     <string name="ride_time">Ride time:20min</string>
-
+    <string name="amount_pay">Total Amount Payable</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

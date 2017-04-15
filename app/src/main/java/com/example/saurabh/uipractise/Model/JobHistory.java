@@ -60,98 +60,98 @@ public class JobHistory implements Parcelable {
     /**
      * @return driver name
      */
-    public String getmDriverName() {
+    public String getDriverName() {
         return mDriverName;
     }
 
     /**
      * @param mDriverName string
      */
-    public void setmDriverName(final String mDriverName) {
+    public void setDriverName(final String mDriverName) {
         this.mDriverName = mDriverName;
     }
 
     /**
      * @return date and time
      */
-    public String getmDateAndTime() {
+    public String getDateAndTime() {
         return mDateAndTime;
     }
 
     /**
      * @param mDateAndTime string
      */
-    public void setmDateAndTime(final String mDateAndTime) {
+    public void setDateAndTime(final String mDateAndTime) {
         this.mDateAndTime = mDateAndTime;
     }
 
     /**
      * @return distance
      */
-    public String getmDistance() {
+    public String getDistance() {
         return mDistance;
     }
 
     /**
      * @param mDistance string returns distance
      */
-    public void setmDistance(final String mDistance) {
+    public void setDistance(final String mDistance) {
         this.mDistance = mDistance;
     }
 
     /**
      * @return destination of path
      */
-    public String getmDestination() {
+    public String getDestination() {
         return mDestination;
     }
 
     /**
      * @param mDestination string
      */
-    public void setmDestination(final String mDestination) {
+    public void setDestination(final String mDestination) {
         this.mDestination = mDestination;
     }
 
     /**
      * @return pickup address
      */
-    public String getmPickupAddress() {
+    public String getPickupAddress() {
         return mPickupAddress;
     }
 
     /**
      * @param mPickupAddress string
      */
-    public void setmPickupAddress(final String mPickupAddress) {
+    public void setPickupAddress(final String mPickupAddress) {
         this.mPickupAddress = mPickupAddress;
     }
 
     /**
      * @return ride time
      */
-    public String getmRideTime() {
+    public String getRideTime() {
         return mRideTime;
     }
 
     /**
      * @param mRideTime string
      */
-    public void setmRideTime(final String mRideTime) {
+    public void setRideTime(final String mRideTime) {
         this.mRideTime = mRideTime;
     }
 
     /**
      * @return fare
      */
-    public String getmFare() {
+    public String getFare() {
         return mFare;
     }
 
     /**
      * @param mFare string
      */
-    public void setmFare(final String mFare) {
+    public void setFare(final String mFare) {
         this.mFare = mFare;
     }
 

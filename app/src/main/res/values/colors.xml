@@ -8,4 +8,5 @@
     <color name="toolbarColor">#18568c</color>
     <color name="warm_grey">#9b9b9b</color>
     <color name="black">#000000</color>
+    <color name="amount_color">#18568c</color>
 </resources>

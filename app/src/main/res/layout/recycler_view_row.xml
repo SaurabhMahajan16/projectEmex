@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/rectangular_body"
     android:orientation="vertical">
 
@@ -33,12 +33,21 @@
 
 
     </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_drivername"
+        style="@style/recyclerlayout"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/driver_name"
+        android:textColor="@color/black"
+        />
 
     <LinearLayout
         android:id="@+id/pickup_to_destination"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -80,21 +89,21 @@
             <TextView
                 android:id="@+id/tv_pickup"
                 style="@style/recyclerlayout"
-                />
+                android:layout_width="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_destination"
                 style="@style/recyclerlayout"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content" />
             <TextView
                android:id="@+id/tv_ridetime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/recyclerlayout"
                 android:padding="5dp"
                 android:text="@string/ride_time"
                 android:textSize="13sp"
                 android:layout_marginTop="8dp"
-                    />
+                android:layout_width="wrap_content" />
 
 
         </LinearLayout>
@@ -102,12 +111,33 @@
 
     </LinearLayout>
     <View
+        android:id="@+id/v_line_above_payment"
         style="@style/fillparent"
         android:layout_height="1dp"
         android:layout_margin="8dp"/>
     <LinearLayout
-        android:layout_width=""
-        android:layout_height=""></LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_amounttext"
+            style="@style/recyclerlayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:text="@string/amount_pay"
+            android:textColor="@color/amount_color"
+            />
+        <TextView
+            android:id="@+id/tv_fare"
+            style="@style/recyclerlayout"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            />
+
+
+
+    </LinearLayout>
     
 
 </LinearLayout>
