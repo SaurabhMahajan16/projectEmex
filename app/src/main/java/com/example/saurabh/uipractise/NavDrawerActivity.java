@@ -11,19 +11,23 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.saurabh.uipractise.Fragment.JobHistoryFragment;
+import com.example.saurabh.uipractise.Fragment.MapFragment;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 /**
  * navigation drawer activity
  */
 
-public class NavDrawerActivity extends AppCompatActivity implements View.OnClickListener{
+public class NavDrawerActivity extends AppCompatActivity implements View.OnClickListener {
     private ImageButton imgbtnDrawer;
     private DrawerLayout mDrawer;
-    private String[] pageTitle = {"Job History", "Missed Jobs"};
-    private TextView tvTitle, tvJobHistory, tvPayments, tvlogout;
+    private TextView tvTitle, tvJobHistory, tvPayments, tvlogout, tvNetworks;
 
     /**
      * on starting of an activity
+     *
      * @param savedInstanceState
      */
     @Override
@@ -42,9 +46,8 @@ public class NavDrawerActivity extends AppCompatActivity implements View.OnClick
         tvJobHistory.setOnClickListener(this);
         tvPayments.setOnClickListener(this);
         tvlogout.setOnClickListener(this);
-
+        tvNetworks.setOnClickListener(this);
     }
-
 
 
     /**
@@ -56,7 +59,9 @@ public class NavDrawerActivity extends AppCompatActivity implements View.OnClick
         tvJobHistory = (TextView) findViewById(R.id.tv_jobhistory);
         tvPayments = (TextView) findViewById(R.id.tv_payment);
         tvlogout = (TextView) findViewById(R.id.tv_logout);
-        mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        tvNetworks = (TextView) findViewById(R.id.tv_networks);
+
     }
 
 
@@ -68,26 +73,35 @@ public class NavDrawerActivity extends AppCompatActivity implements View.OnClick
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         JobHistoryFragment jobHistoryFragment = new JobHistoryFragment();
+        MapFragment mapFragment = new MapFragment();
         switch (id) {
+            case R.id.tv_networks:
+
+                tvTitle.setText(getString(R.string.maps));
+                fragmentTransaction.replace(R.id.container, mapFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                break;
             case R.id.tv_payment:
 
                 tvTitle.setText(getString(R.string.job_history));
                 fragmentTransaction.replace(R.id.container, jobHistoryFragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case R.id.tv_jobhistory:
                 tvTitle.setText(getString(R.string.job_history));
                 fragmentTransaction.replace(R.id.container, jobHistoryFragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case R.id.tv_logout:
                 finish();
             default:
-
                 break;
         }
         mDrawer.closeDrawer(Gravity.START);
     }
 
-    }
+}
 

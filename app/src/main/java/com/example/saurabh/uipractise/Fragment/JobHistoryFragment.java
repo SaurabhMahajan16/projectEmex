@@ -1,6 +1,5 @@
 package com.example.saurabh.uipractise.Fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,14 +14,13 @@ import com.example.saurabh.uipractise.AppConstants.Constants;
 import com.example.saurabh.uipractise.Model.JobHistory;
 import com.example.saurabh.uipractise.R;
 
-
 import java.util.ArrayList;
 
 /**
  * fragment class
  */
 
-public class JobHistoryFragment extends Fragment{
+public class JobHistoryFragment extends Fragment {
 
     private Button mMissedJobs, mJobHistory;
     private ViewPager viewPager;
@@ -30,9 +28,12 @@ public class JobHistoryFragment extends Fragment{
 
     @Nullable
     @Override
-    public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container,
+                             @Nullable final Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_job_missed_history, container, false);
         init(view);
+        changeButtonColor(0);
         mJobHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,9 +61,9 @@ public class JobHistoryFragment extends Fragment{
             @Override
             public Fragment getItem(final int position) {
                 if (position == 0) {
-                     return JobsFragment.getInstance(Constants.COMPLETED, jobHistory);
+                    return JobsFragment.getInstance(Constants.COMPLETED_JOBS, jobHistory);
                 }
-                return JobsFragment.getInstance(Constants.MISSED, jobHistory);
+                return JobsFragment.getInstance(Constants.MISSED_JOBS, jobHistory);
 
             }
 
@@ -93,30 +94,27 @@ public class JobHistoryFragment extends Fragment{
                     changeButtonColor(1);
                 }
             }
-            });
-
-
-
+        });
 
 
         return view;
     }
 
 
-            public void init(View v){
+    public void init(View v) {
         viewPager = (ViewPager) v.findViewById(R.id.vp_swipe);
         mMissedJobs = (Button) v.findViewById(R.id.btn_missedjobs);
         mJobHistory = (Button) v.findViewById(R.id.btn_jobhistory);
     }
 
-    public void changeButtonColor(int change){
-        if(change == 0){
+    public void changeButtonColor(int change) {
+        if (change == 0) {
             mJobHistory.setBackgroundResource(R.color.bgBlue);
-            mMissedJobs.setBackgroundResource(R.color.colorPrimaryDark);}
-            else{
+            mMissedJobs.setBackgroundResource(R.color.colorPrimaryDark);
+        } else {
             mJobHistory.setBackgroundResource(R.color.colorPrimaryDark);
             mMissedJobs.setBackgroundResource(R.color.bgBlue);
-            }
         }
     }
+}
 

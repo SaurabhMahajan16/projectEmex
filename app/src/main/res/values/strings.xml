@@ -33,6 +33,10 @@ to reset your password.</string>
     <string name="missed_jobs">Missed Jobs</string>
     <string name="ride_time">Ride time:20min</string>
     <string name="amount_pay">Total Amount Payable</string>
+    <string name="data">Data</string>
+    <string name="mode">Mode</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyAlp1GOZJa2YWyCX47wDEZy16_ZNzwqeK0</string>
+    <string name="maps">Maps And Location</string>
 </resources>

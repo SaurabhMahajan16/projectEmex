@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.saurabh.uipractise.Model.JobHistory;
@@ -22,7 +21,8 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     /**
      * constructor
-     * @param mode is for check of which fragment is to be shown
+     *
+     * @param mode             is for check of which fragment is to be shown
      * @param mJobHistoryModel object of arraylist of jobHistory model
      */
     public JobHistoryAdapter(final int mode, final ArrayList<JobHistory> mJobHistoryModel) {
@@ -31,30 +31,30 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     }
 
     /**
-     *
-     * @param parent parent
+     * @param parent   parent
      * @param viewType gives type of view
      * @return inflated view
      */
     @Override
     public JobHistoryAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_row,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_row, parent, false);
         return new ViewHolder(view);
     }
 
     /**
      * binds view to the layout
-     * @param holder holds the layout
+     *
+     * @param holder   holds the layout
      * @param position gives the position
      */
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder holder,final int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
         JobHistory jobHistory = mJobHistoryModel.get(position);
-       ViewHolder viewHolder = (ViewHolder) holder;
+        ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.tvDateAndTime.setText(jobHistory.getDateAndTime());
         viewHolder.tvDistance.setText(jobHistory.getDistance());
         viewHolder.tvPickup.setText(jobHistory.getPickupAddress());
-        if(mMode == 1){
+        if (mMode == 1) {
             viewHolder.tvDestination.setVisibility(View.GONE);
             viewHolder.tvRedCircle.setVisibility(View.GONE);
             viewHolder.vBottomLine.setVisibility(View.GONE);
@@ -63,7 +63,7 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             viewHolder.tvAmountText.setVisibility(View.GONE);
             viewHolder.tvFare.setVisibility(View.GONE);
             viewHolder.tvDriverName.setText(jobHistory.getDriverName());
-        }else {
+        } else {
             viewHolder.tvDriverName.setVisibility(View.GONE);
             viewHolder.tvDestination.setText(jobHistory.getDestination());
             viewHolder.tvFare.setText(jobHistory.getFare());
@@ -71,14 +71,11 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         }
 
 
-
-
-
-
     }
 
     /**
      * returns item count
+     *
      * @return size
      */
     @Override
@@ -90,7 +87,7 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
      * inner class
      */
     private class ViewHolder extends RecyclerView.ViewHolder {
-        private View  vDistanceLine, vBottomLine;
+        private View vDistanceLine, vBottomLine, vline;
         private TextView tvDateAndTime, tvDistance, tvDriverName, tvDestination, tvPickup,
                 tvFare, tvRideTime, tvRedCircle, tvAmountText;
 
@@ -110,7 +107,7 @@ public class JobHistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             vBottomLine = itemView.findViewById(R.id.v_line_above_payment);
             tvAmountText = (TextView) itemView.findViewById(R.id.tv_amounttext);
             tvDriverName = (TextView) itemView.findViewById(R.id.tv_drivername);
-
+            vline = itemView.findViewById(R.id.v_line);
         }
     }
 }

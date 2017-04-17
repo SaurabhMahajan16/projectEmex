@@ -38,9 +38,7 @@
             android:layout_below="@id/ll_button"
             style="@style/fillparent"
             >
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_history"
-                style="@style/fillparent" />
+
 
 
         </android.support.v4.view.ViewPager>

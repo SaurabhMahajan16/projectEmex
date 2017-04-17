@@ -1,9 +1,12 @@
 package com.example.saurabh.uipractise;
 
+import android.Manifest;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * this on create function
+     *
      * @param savedInstanceState
      */
     @Override
@@ -24,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 btnLogin.setVisibility(View.VISIBLE);
@@ -40,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
-                 intent = new Intent(getApplicationContext(), LoginActivity.class);
+                intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -58,15 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     /**
      * find ids of all elements
      */
-    public void init(){
+    public void init() {
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnSignUp = (Button) findViewById(R.id.btn_signUp);
     }
 
-    }
-
+}

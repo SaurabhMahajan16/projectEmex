@@ -5,15 +5,10 @@ package com.example.saurabh.uipractise.AppConstants;
  */
 
 public interface Constants {
-    int REQUEST_CODE_LOGIN = 0;
-    int REQUEST_CODE_SIGNUP = 1;
-    int SPLASH_TIMER = 3000;
-    int COMPLETED = 0;
-    int MISSED = 1;
+    int COMPLETED_JOBS = 0;
+    int MISSED_JOBS = 1;
+    int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * empty
-     */
-    void initi();
+
 }
 
